@@ -8,7 +8,7 @@ const Header = () => {
             <div className='md:flex md:justify-center md:gap-60 py-40 bg-pink-100 rounded-lg p-5'>
                 <section className='mt-20 space-y-6 md:ml-5 ml-10'>
                     <h1 className=' md:text-6xl font-bold'>BEAUTY SALON <br />
-                        FOR EVERY WOMEN
+                        FOR EVERY WOMEN and Abid
                     </h1>
                     <p className=''>
                         Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Purus commodo ipsum duis <br /> laoreet maecenas. Feugiat
