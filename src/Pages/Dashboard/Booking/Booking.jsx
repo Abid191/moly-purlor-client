@@ -20,8 +20,23 @@ const Booking = () => {
                     <h1>Pay With</h1>
                 </div>
                 <div className='mt-5'>
-                    <input type="radio" name="radio-3" className=" radio radio-secondary" checked />
-                    <input type="radio" name="radio-3" className="ml-5 radio radio-secondary" />
+                    <div className='items-center flex'>
+                        <input type="radio" name="radio-3" className="mr-5 radio radio-secondary" checked />
+                        <h2>Bkash</h2>
+                        <button className='btn btn-secondary btn-xs ml-2'>Pay</button>
+
+                    </div>
+
+                    <div>
+                        <div className='items-center flex mt-5'>
+                            <input type="radio" name="radio-3" className="mr-5 radio radio-secondary" />
+                            <h2>Nogod</h2>
+                            <button className='btn btn-secondary btn-xs ml-2'>Pay</button>
+                        </div>
+                    </div>
+
+                   
+
                 </div>
             </form>
 
