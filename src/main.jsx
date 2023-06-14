@@ -13,6 +13,12 @@ import Portfolio from './Pages/Portfolio/Portfolio.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Team from './Pages/Team/Team.jsx';
 import Home from './Pages/Home/Home.jsx';
+import Login from './Pages/Shared/Login/Login.jsx';
+import SignUp from './Pages/Shared/SignUp/SignUp.jsx';
+import Dashboard from './Pages/Dashboard/Dashboard.jsx';
+import Booking from './Pages/Dashboard/Booking/Booking.jsx';
+import BookList from './Pages/Dashboard/BookList/BookList.jsx';
+import Review from './Pages/Dashboard/Review/Review.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +41,37 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact></Contact>,
       },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
     ]
   },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children:[
+      
+        {
+          path: "booking",
+          element: <Booking></Booking>,
+        },
+        {
+          path: "list",
+          element: <BookList></BookList> ,
+        },
+        {
+          path: "review",
+          element: <Review></Review>,
+        },
+      
+    ]
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
