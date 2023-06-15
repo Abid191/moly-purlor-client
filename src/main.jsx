@@ -19,6 +19,11 @@ import Dashboard from './Pages/Dashboard/Dashboard.jsx';
 import Booking from './Pages/Dashboard/Booking/Booking.jsx';
 import BookList from './Pages/Dashboard/BookList/BookList.jsx';
 import Review from './Pages/Dashboard/Review/Review.jsx';
+import AdminDash from './Pages/AdminDashBoard/AdminDash.jsx';
+import OrderList from './Pages/AdminDashBoard/OrderList/OrderList.jsx';
+import AddService from './Pages/AdminDashBoard/AddService/AddService.jsx';
+import MakeAdmin from './Pages/AdminDashBoard/MakeAdmin/MakeAdmin.jsx';
+import ManageService from './Pages/AdminDashBoard/ManageService/ManageService.jsx';
 
 const router = createBrowserRouter([
   {
@@ -54,30 +59,52 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard></Dashboard>,
-    children:[
-      
-        {
-          path: "booking",
-          element: <Booking></Booking>,
-        },
-        {
-          path: "list",
-          element: <BookList></BookList> ,
-        },
-        {
-          path: "review",
-          element: <Review></Review>,
-        },
-      
+    children: [
+
+      {
+        path: "booking",
+        element: <Booking></Booking>,
+      },
+      {
+        path: "list",
+        element: <BookList></BookList>,
+      },
+      {
+        path: "review",
+        element: <Review></Review>,
+      },
     ]
   },
+
+  {
+    path: "admindash",
+    element: <AdminDash></AdminDash>,
+    children: [
+      {
+        path: "order",
+        element: <OrderList></OrderList>,
+      },
+      {
+        path: "service",
+        element: <AddService></AddService>,
+      },
+      {
+        path: "makeadmin",
+        element: <MakeAdmin></MakeAdmin>,
+      },
+      {
+        path: "manage",
+        element: <ManageService></ManageService>,
+      },
+    ]
+  }
 
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
-    <React.StrictMode>
+
+  <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
- 
+
 )

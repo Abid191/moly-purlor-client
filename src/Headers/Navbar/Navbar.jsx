@@ -8,6 +8,7 @@ const Navbar = () => {
         <li><Link to="team"> Our Team </Link></li>
         <li><Link to="contact"> Contact Us </Link></li>
         <li><Link to="dashboard"> Dashboard </Link></li>
+        <li><Link to="admindash"> Admin </Link></li>
 
     </>
     return (

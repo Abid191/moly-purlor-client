@@ -5,7 +5,7 @@ const Review = () => {
         <div>
             <div className='flex bg-pink-200 font-bold px-20 p-5 justify-between mt-5'>
                 <h1>Book</h1>
-                <h1>Pro Rasel</h1>
+                <h1>Pro Purlor</h1>
             </div>
 
             <div className='bg-blue-100 h-screen md:pl-20 p-5'>
