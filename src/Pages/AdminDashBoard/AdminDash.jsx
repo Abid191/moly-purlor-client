@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaAddressBook, FaBookOpen, FaFacebookMessenger, FaFirstOrder, FaPhoneSquare, FaPlus, FaServer, FaShoppingCart, FaUserPlus } from 'react-icons/fa';
+import { FaAddressBook, FaBackward, FaBookOpen, FaFacebookMessenger, FaFirstOrder, FaPhoneSquare, FaPlus, FaServer, FaShoppingCart, FaUserPlus } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 
 const AdminDash = () => {
@@ -25,6 +25,7 @@ const AdminDash = () => {
                             <li><Link to="service"> <span><FaPlus /></span>Add Service</Link></li>
                             <li><Link to="makeadmin"><span> <FaUserPlus /></span>Make Admin</Link></li>
                             <li><Link to="manage"><span> <FaServer /></span>Manage Service</Link></li>
+                            <li><Link to="/"><span> <FaBackward /></span>Back to home</Link></li>
                         </div>
 
                     </ul>
