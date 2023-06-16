@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { FaBackward, FaBeer, FaBookOpen, FaFacebookMessenger, FaShoppingCart } from 'react-icons/fa';
+import { FaBackward, FaBookOpen, FaFacebookMessenger, FaShoppingCart } from 'react-icons/fa';
 
 const Dashboard = () => {
     return (
 
         <div>
-
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content  items-center ">
@@ -40,10 +39,15 @@ const Dashboard = () => {
                         </div>
 
                     </ul>
+                    
 
                 </div>
 
             </div>
+
+
+
+            
         </div>
     );
 };

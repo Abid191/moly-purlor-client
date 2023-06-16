@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Navbar from './Headers/Navbar/Navbar.jsx';
 import Layout from './Headers/Layout/Layout.jsx';
 import Portfolio from './Pages/Portfolio/Portfolio.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
@@ -24,6 +22,8 @@ import OrderList from './Pages/AdminDashBoard/OrderList/OrderList.jsx';
 import AddService from './Pages/AdminDashBoard/AddService/AddService.jsx';
 import MakeAdmin from './Pages/AdminDashBoard/MakeAdmin/MakeAdmin.jsx';
 import ManageService from './Pages/AdminDashBoard/ManageService/ManageService.jsx';
+import AuthProvider from './Pages/Shared/AuthProvider/AuthProvider.jsx';
+import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -36,11 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/portfolio",
-        element: <Portfolio></Portfolio>,
+        element: <PrivateRoute><Portfolio></Portfolio></PrivateRoute>,
       },
       {
         path: "/team",
-        element: <Team></Team>,
+        element: <PrivateRoute><Team></Team></PrivateRoute>,
       },
       {
         path: "/contact",
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
 
       {
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
 
   {
     path: "admindash",
-    element: <AdminDash></AdminDash>,
+    element: <PrivateRoute><AdminDash></AdminDash></PrivateRoute>,
     children: [
       {
         path: "order",
@@ -104,7 +104,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 
 )

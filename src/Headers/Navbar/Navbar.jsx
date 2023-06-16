@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Pages/Shared/AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    
+
+    const {user,logOut} = useContext(AuthContext)
+
+    const handleLogOut = () =>{
+         logOut()
+         .then(() => {
+
+         }).catch((error) => {
+             console.log(error)
+         });
+    }
+
+
     const Navbar = <>
         <li><Link to="/"> Home </Link></li>
         <li><Link to="portfolio"> Our Portfolio </Link></li>
         <li><Link to="team"> Our Team </Link></li>
         <li><Link to="contact"> Contact Us </Link></li>
-        <li><Link to="dashboard"> Dashboard </Link></li>
-        <li><Link to="admindash"> Admin </Link></li>
+        { user && <li><Link to="dashboard"> Dashboard </Link></li>}
+        { user && <li><Link to="admindash"> Admin </Link></li>}
 
     </>
     return (
@@ -32,9 +47,15 @@ const Navbar = () => {
                     {Navbar}
                 </ul>
             </div>
-            <div className="">
+            {
+                user ? 
+                <>
+                <button onClick={handleLogOut} className='btn btn-secondary'>Log Out</button>
+                </> :
+                <>
                 <Link to="/login" className="btn text-white bg-pink-400">Login</Link>
-            </div>
+                </>
+            }
         </div>
         
     );
