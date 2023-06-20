@@ -44,7 +44,7 @@ const Dashboard = () => {
               <img className="w-2/4" src="/src/assets/assets/logo.png" alt="" />
               <label
                 htmlFor="my-drawer-2"
-                class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                class="inline-flex lg:hidden items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
               >
                 <svg
                   class="-ml-0.5 mr-1.5 h-2 w-2"
